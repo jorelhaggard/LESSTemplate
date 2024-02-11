@@ -378,7 +378,7 @@
 @media only screen and (min-width: 0rem) {
     #contact-strip-1111 {
         padding: var(--sectionPadding);
-        background-color: var(--primary);
+        background-color: #f7f7f7;
         position: relative;
         z-index: 1;
 
@@ -522,7 +522,26 @@
     }
 }
 
-                                
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #contact-strip-1111 {
+            background-color: rgba(0, 0, 0, 0.2);
+            .cs-title,
+            .cs-text,
+            .cs-number,
+            .cs-desc {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-wave {
+                path {
+                    fill: var(--dark);
+                }
+            }
+        }
+    }
+}                                
                                                                 
 
                                 
