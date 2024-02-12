@@ -5,10 +5,10 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
+    --primary: #e20a16;
+    --primaryLight: #fa0a17;
+    --secondary: #e20a16;
+    --secondaryLight: #fa0a17;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
