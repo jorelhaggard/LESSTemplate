@@ -235,7 +235,287 @@
     }
 }
 
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
 
+/* Mobile - 360px *//*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-355 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-card-group {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.5vw, 1.15rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            max-width: (630/16rem);
+            margin: 0;
+            /* 24px - 32px top & bottom */
+            /* 16px - 40px left & right */
+            padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
+            background-color: #f7f7f7;
+            border-radius: (16/16rem);
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .cs-quote {
+            width: (40/16rem);
+            height: auto;
+            margin-bottom: (32/16rem);
+            display: block;
+        }
+
+        .cs-review {
+            /* 14px - 20px */
+            font-size: clamp(0.875rem, 2vw, 1.25rem);
+            line-height: 1.5em;
+            margin: 0;
+            /* 20px - 40px */
+            margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-name {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 3vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+            margin-top: auto;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-job {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.6vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            display: block;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-355 {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+
+        .cs-item {
+            width: clamp(31.5%, 30vw, 32.3%);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #reviews-355 {
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item {
+                background-color: var(--accent);
+            }
+
+            .cs-review,
+            .cs-name {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-job {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+                                
+@media only screen and (min-width: 0rem) {
+    #services-468 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1440px at 768px */
+            max-width: (550/16em);
+            margin: auto;
+        }
+
+        .cs-card-group {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            /* 8px - 20px */
+            column-gap: clamp(0.5rem, 1.5vw, 1.25rem);
+            row-gap: (20/16rem);
+        }
+
+        .cs-item {
+            width: 48.5%;
+            list-style: none;
+            /* 24px - 48px top and bottom */
+            padding: clamp(1.5rem, 4vw, 3rem) (24/16rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            border-radius: (12/16rem);
+            background-color: #fff;
+            border: 1px solid #b4b2c7;
+            box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 12px - 24px */
+            gap: clamp(0.875rem, 2vw, 2rem);
+            position: relative;
+            transition: border-color 0.3s;
+
+            &:before {
+                /* green border on hover */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                /* prevents mouse from interacting with it */
+                pointer-events: none;
+                border: 4px solid var(--primaryLight);
+                box-sizing: border-box;
+                /* prevents border from affecting height and width */
+                border-radius: (10/16rem);
+                opacity: 0;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                transition: opacity 0.3s;
+            }
+
+            &:hover {
+                border-color: var(--primaryLight);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:nth-of-type(5) {
+                width: 100%;
+            }
+        }
+
+        .cs-icon {
+            /* 44px - 90px */
+            width: clamp(2.75rem, 6vw, 5.625rem);
+            height: auto;
+        }
+
+        .cs-h3 {
+            /* 16px - 25px */
+            font-size: clamp(1rem, 2vw, 1.5625rem);
+            line-height: 1.2em;
+            text-align: center;
+            margin: 0;
+            color: var(--headerColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-468 {
+        .cs-container {
+            max-width: (1440/16rem);
+        }
+
+        .cs-card-group {
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+
+        .cs-item {
+            width: 100%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-468 {
+            .cs-item {
+                background-color: var(--accent);
+            }
+
+            .cs-icon {
+                /* makes icons turn grey and brighten them up */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-h3 {
+                color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}
 /*-- -------------------------- -->
 <---      Contact Strip         -->
 <--- -------------------------- -*/
@@ -409,152 +689,7 @@
     }
 }                                
                                                                 
-/*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #reviews-355 {
-        padding: var(--sectionPadding);
-
-        .cs-container {
-            width: 100%;
-            max-width: (1440/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-card-group {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            /* 16px - 20px */
-            gap: clamp(1rem, 2.5vw, 1.15rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            max-width: (630/16rem);
-            margin: 0;
-            /* 24px - 32px top & bottom */
-            /* 16px - 40px left & right */
-            padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
-            background-color: #f7f7f7;
-            border-radius: (16/16rem);
-            /* prevents padding from adding to height and width */
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .cs-quote {
-            width: (40/16rem);
-            height: auto;
-            margin-bottom: (32/16rem);
-            display: block;
-        }
-
-        .cs-review {
-            /* 14px - 20px */
-            font-size: clamp(0.875rem, 2vw, 1.25rem);
-            line-height: 1.5em;
-            margin: 0;
-            /* 20px - 40px */
-            margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
-            color: var(--bodyTextColor);
-        }
-
-        .cs-name {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 3vw, 1.5625rem);
-            line-height: 1.2em;
-            font-weight: 700;
-            margin: 0;
-            /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
-            margin-top: auto;
-            color: var(--headerColor);
-            display: block;
-        }
-
-        .cs-job {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.6vw, 1rem);
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--bodyTextColor);
-            display: block;
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #reviews-355 {
-        .cs-card-group {
-            flex-direction: row;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-        }
-
-        .cs-item {
-            width: clamp(31.5%, 30vw, 32.3%);
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #reviews-355 {
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-item {
-                background-color: var(--accent);
-            }
-
-            .cs-review,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: 0.7;
-            }
-        }
-    }
-}
-
-                                                             
+                                
 
                                 
