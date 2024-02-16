@@ -17,47 +17,44 @@ eleventyNavigation:
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<!--               Side By Side                   -->
+<!-- ============================================ -->
 
-    <section id="sbs">
-        <div class="top-marg"></div>
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/jennajosh.png">
-                    <source media="(min-width: 601px)" srcset="/assets/images/jennajosh.png">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/jennajosh.png" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/scpboys.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/scpboys.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/scpboys.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">SCP Chiropractic</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amest imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Drs. Jenna and Josh Haggard</span>
-                    <span class="cs-job">Founders & Operators</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/projects" class="cs-button-solid">Our Philosophy</a>
-            </div>
+<section id="sbs-866">
+    <div class="top-marg"></div>
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Left Image-->
+            <picture class="cs-left-img">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy6.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy6.jpg" alt="therapy" width="439" height="560">
+            </picture>
+            <!--Right Image-->
+            <picture class="cs-right-img">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg" alt="therapy" width="439" height="560">
+            </picture>
         </div>
-    </section>
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">30 Years of Family Care</h2>
+            <p class="cs-text">
+                Family is at the core of what we do at SCP Chiropractic. Our 3 sons were raised with the same emphasis on holistic health and wellness that we share with everyone who comes to our practice. We have a wholesome, welcoming office environment to ensure our patients know that they're part of the family too. 
+            </p>
+            <p class="cs-text">
+                Our focus as healthcare practitioners is on long-term holistic health. Rather than simply treating symptoms, we take great care to assemble an interconnected understanding of the individual health of our patients, including all the internal and external factors that contribute to the symptoms they are experiencing. With this knowledge, we develop treatment plans and educate our patients to enrich their relationship with their own wellness and empower them to achieve better health. While we hate to see patients go, it is our ultimate goal to get them feeling so confident in the future of their health that they don't need to come in anymore (unless they miss us!).
+            </p>
+            <a href="/products" class="cs-button-solid">Our Philosophy</a>
+        </div>
+    </div>
+</section>
+                                
 
     {% include 'components/cta.html' %}
 
