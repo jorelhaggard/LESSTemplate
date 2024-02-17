@@ -1,15 +1,15 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "SCP Chiropractic",
+    "email": "lori@scpchiropractic.com",
+    "phoneForTel": "602-601-4500",
+    "phoneFormatted": "(602) 601-4500",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "lineOne": "4767 N. 20th St.",
+        "lineTwo": "",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "85008",
+        "mapLink": "https://www.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KdeFDzVkDSuHMSd7Cc79U6Pp&daddr=4767+N+20th+St,+Phoenix,+AZ+85016"
     },
-    "domain": "https://www.codestitch.app"
+    "domain": "https://scpchiropractic.com"
 }
