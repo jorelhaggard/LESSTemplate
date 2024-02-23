@@ -17,20 +17,35 @@ eleventyNavigation:
 {% block body %}
 
 <!-- ============================================ -->
-<!--                    Map                       -->
+<!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="map-720">
-    <!--Download the pin icon, in Figma create a 1920x600 rectangle and make its background a screenshot of the Google Maps location of your clients business location, make sure their actual location is at the center. Doesn't have to be EXACT. Then add the pin in Figma and absolutely position it where its location is in the map.  Highlight everything and hit CTRL G to group it, then export that section as a png.  Now you have your map graphic made for your client. Make an 800X1000 center crop of the image to load on mobile. Then remove this img tag for the icon. -->
-    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fred-pin.svg" alt="icon" decoding="async" width="80" height="80" aria-hidden="true">
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fmap.png">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fmap.png">
-        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fmap.png" alt="map" width="1280" height="600">
-    </picture>
+<section id="hero-855">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h1 class="cs-title">Directions to The Office</h1>
+            <p class="cs-text">
+                From the parking lot in front of Trader Joe's, Whole Foods, or LA Fitness, you can find our office by walking behind Trader Joe's.
+            </p>
+        </div>
+        <!--Hero Image-->
+        <picture class="cs-picture">
+            <!--Mobile-->
+            <source media="(max-width: 600px)" srcset="/assets/svgs/TACMap.svg">
+            <!--Tablet-->
+            <source media="(min-width: 601px)" srcset="/assets/svgs/TACMap.svg">
+            <!--Desktop-->
+            <source media="(min-width: 1024px)" srcset="/assets/svgs/TACMap.svg">
+            <img aria-hidden="true" decoding="async" src="/assets/svgs/TACMap.svg" alt="therapy" width="570" height="701">
+            </picture>
+    </div>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
 </section>
+                                
                                 
 
 
