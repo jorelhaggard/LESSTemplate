@@ -43,7 +43,7 @@ eleventyNavigation:
     <div class="top-marg"></div>
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Chiropractic Biophysics</span>
+            <span class="cs-topper">Practitioners of Chiropractic Biophysics</span>
             <h1 class="cs-title" id="hero-title">Holistic Health and Wellness</h1>
             <p class="cs-text" id="hero-text">
                 Chiropractic care for all (newborns and up). We treat spines from the womb to the tomb!
@@ -181,14 +181,44 @@ eleventyNavigation:
 <script>
     const images = [
         {
-            src: "/assets/images/scpfronty.jpg",
+            src: "/assets/images/newfront.jpg",
             title: "Holistic Health and Wellness",
             text: "Chiropractic care for all (newborns and up)."
         },
         {
-            src: "/assets/images/cabinets-m.jpg",
-            title: "Wellness for Everyone",
-            text: "Tailored treatments for all ages."
+            src: "/assets/images/adjust.jpg",
+            title: "Therapies Offered",
+            text: "Musculature/Joint Manipulation and Kinesio Taping"
+        },
+        {
+            src: "/assets/images/roller.jpg",
+            title: "Therapies Offered",
+            text: "Mechanical Dynamic Traction and Compression Therapy"
+        },
+        {
+            src: "/assets/images/plate.jpg",
+            title: "Therapies Offered",
+            text: "PowerPlate Vibration Therapy and Exercise Therapy"
+        },
+        {
+            src: "/assets/images/table.jpg",
+            title: "Therapies Offered",
+            text: "Postural Traction using Berry Translation Tables"
+        },
+        {
+            src: "/assets/images/traction.jpg",
+            title: "Therapies Offered",
+            text: "Upright Postural Traction Therapy"
+        },
+        {
+            src: "/assets/images/distraction.jpg",
+            title: "Therapies Offered",
+            text: "Flexion-Distraction Therapy and Laser Light Therapy"
+        },
+        {
+            src: "/assets/images/sissy.jpg",
+            title: "Therapies Offered",
+            text: "Myofascial Release Therapy"
         }
     ];
 
@@ -216,6 +246,14 @@ eleventyNavigation:
 
     // Initialize the content
     updateContent();
+
+    // Auto-cycle the images every 5 seconds (5000 milliseconds)
+    setInterval(() => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateContent();
+    }, 5000); // Change 5000 to your desired interval in milliseconds
+
+
 </script>
 
 {% endblock %}
