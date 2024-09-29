@@ -44,30 +44,30 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Chiropractic Biophysics</span>
-            <h1 class="cs-title">Holistic Health and Wellness</h1>
-            <p class="cs-text">
-            Chiropractic care for all (newborns and up). We treat spines from the womb to the tomb!
+            <h1 class="cs-title" id="hero-title">Holistic Health and Wellness</h1>
+            <p class="cs-text" id="hero-text">
+                Chiropractic care for all (newborns and up). We treat spines from the womb to the tomb!
             </p>
             <a href="/projects" class="cs-button-solid">Our Philosophy and Treatment Methodology</a>
             <div style="margin-top: 5px;"></div>
             <a href="tel:602-631-4500" class="cs-button-solid">Call Us to Schedule An Appointment</a>
         </div>
-        <!--Hero Image-->
-        <picture class="cs-picture">
-            <!--Mobile-->
-            <source media="(max-width: 600px)" srcset="/assets/images/scpfronty.jpg">
-            <!--Tablet-->
-            <source media="(min-width: 601px)" srcset="/assets/images/scpfronty.jpg">
-            <!--Desktop-->
-            <source media="(min-width: 1024px)" srcset="/assets/images/scpfronty.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/scpfronty.jpg" alt="therapy" width="570" height="701">
-            </picture>
+
+        <!-- Hero Image -->
+        <div class="image-container">
+            <button id="prev" class="arrow">❮</button>
+            <div class="cs-picture">
+                <img id="hero-image" src="/assets/images/scpfronty.jpg" alt="therapy" width="570" height="701">
+            </div>
+            <button id="next" class="arrow">❯</button>
+        </div>
     </div>
-    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+
     <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
     </svg>
 </section>
+
                         
 
 <!-- ============================================ -->
@@ -75,7 +75,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 <section id="services-468">
     <div class="cs-container">
-        <span class="cs-topper" style="text-align: center; margin-bottom: 20px; font-size: 16/16rem;">Office Hours for the Work Week Starting Monday, September 9th</span>
+        <span class="cs-topper" style="text-align: center; margin-bottom: 20px; font-size: 16/16rem;">Office Hours for the Work Week Starting Monday, September 30th</span>
     
         <ul class="cs-card-group">
             <li class="cs-item">
@@ -177,5 +177,45 @@ eleventyNavigation:
         </ul>
     </div>
 </section>
-                                
+
+<script>
+    const images = [
+        {
+            src: "/assets/images/scpfronty.jpg",
+            title: "Holistic Health and Wellness",
+            text: "Chiropractic care for all (newborns and up)."
+        },
+        {
+            src: "/assets/images/cabinets-m.jpg",
+            title: "Wellness for Everyone",
+            text: "Tailored treatments for all ages."
+        }
+    ];
+
+    let currentIndex = 0;
+
+    function updateContent() {
+        const imageElement = document.getElementById("hero-image");
+        const titleElement = document.getElementById("hero-title");
+        const textElement = document.getElementById("hero-text");
+
+        imageElement.src = images[currentIndex].src;
+        titleElement.textContent = images[currentIndex].title;
+        textElement.textContent = images[currentIndex].text;
+    }
+
+    document.getElementById("prev").addEventListener("click", () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateContent();
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateContent();
+    });
+
+    // Initialize the content
+    updateContent();
+</script>
+
 {% endblock %}

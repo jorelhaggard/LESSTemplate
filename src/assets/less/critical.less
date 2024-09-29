@@ -153,8 +153,32 @@
             transform: translateX(-50%);
             z-index: -1;
         }
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; // Centering arrows and image
+            width: 100%;
+            position: relative; // To position arrows correctly
+
+            .arrow {
+                background: none;
+                border: none;
+                font-size: 2em; // Adjust size as needed
+                cursor: pointer;
+                color: var(--primary); // Match with your theme
+                position: absolute; // Positioning
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2; // Ensure arrows are above images
+
+                &:first-child {
+                    left: 10px; // Adjust for spacing
+                }
+                &:last-child {
+                    right: 10px; // Adjust for spacing
     }
 }
+}}}
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -214,4 +238,3 @@
         }
     }
 }
-                                
